@@ -10,8 +10,8 @@ function Hero() {
 
   return (
     <section ref={ref} className="text-2xl text-slate-300 mx-4 mb-10 mt-36 md:text-5xl max-w-screen-lg md:pl-8 md:mx-auto relative">
-      <span className="block relative p-[3px_2px] hero-style before:content-['Club Bink,'] before:orange-gradient before:animation-delay-0">Club Bink</span>
-      <span className="block relative p-[3px_2px] hero-style before:content-['Tu red de confianza para intercambio de Bitcoins'] before:red-gradient before:animation-delay-3">Tu red de confianza.</span>
+      <span className="block relative p-[3px_2px] hero-style before:content-['Club Bink,'] before:orange-gradient before:animation-delay-0">Conoce Bitcoin</span>
+      <span className="block relative p-[3px_2px] hero-style before:content-['Tu red de confianza para intercambio de Bitcoins'] before:red-gradient before:animation-delay-3">de manera segura</span>
       <div className={`absolute top-0 right-0 md:right-8 transition-all ease-in-out duration-300 ${isVisible ? 'md:opacity-100 md:-translate-x-20' : 'md:opacity-0'}`}>
         <img
           className="w-28 md:w-full"
