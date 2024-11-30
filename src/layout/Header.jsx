@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import BinkLogo from '../assets/images/bink_logo.svg';
+import '../index.css';
 
 function Header() {
   const [show, setShow] = useState(false);
@@ -9,8 +10,8 @@ function Header() {
   }
 
   return (
-    <header className="fixed w-full top-0 z-20 backdrop-blur">
-      <nav className="flex items-center justify-between md:justify-evenly py-2 relative max-w-screen-lg mx-auto">
+    <header className="fixed w-full top-0 z-20 backdrop-blur landPage-header">
+      <nav className="flex items-center justify-between py-2 px-2 relative max-w-screen-lg">
         <a href="/me" className="ml-4 md:ml-0">
           <div className="flex items-center">
             <img src={BinkLogo} width={48} height={48} alt="Club Bink Logo" />

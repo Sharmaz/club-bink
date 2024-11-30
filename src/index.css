@@ -4,9 +4,14 @@
 
 html {
   @apply text-slate-400 scroll-smooth;
+  background-color: #001219;
 }
 
 .hamburger-element {
   @apply bg-slate-500 absolute w-8 h-[3px]
   transition-all ease-in-out delay-100;
+}
+
+.landPage-header {
+  background-color: #152429;
 }
