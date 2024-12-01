@@ -1,7 +1,6 @@
 import {
   LineChart,
   Line,
-  CartesianGrid,
   XAxis,
   YAxis,
   Tooltip,
@@ -11,8 +10,8 @@ import btcData from '../btc_data.json';
 
 function BtcChart() {
   return (
-    <div className="chart-container mt-12 flex flex-col items-center justify-center">
-      <h2 className="my-4 text-2xl">Bitcoin - USD</h2>
+    <div className="chart-container mt-8 mx-4 bg-[#27272C] flex flex-col items-center justify-center rounded-3xl p-6">
+      <h2 className="my-4 text-5xl">Bitcoin - USD</h2>
       <LineChart
         width={800}
         height={600}
@@ -30,16 +29,19 @@ function BtcChart() {
           stroke="#FEA419"
           dot={false}
         />
-        <CartesianGrid stroke="#1D1D23" strokeDasharray="5 5" />
         <XAxis
           dataKey="date"
           angle={-35}
           textAnchor="end"
-          height={200}
-          tick={{ stroke: '#F8FDFE', strokeWidth: 0.5 }}
+          height={80}
+          tick={{ stroke: '#FFFFFF', strokeWidth: 1 }}
+          stroke="#324B55"
         />
-        <YAxis tick={{ stroke: '#F8FDFE', strokeWidth: 0.5 }} />
-        <Tooltip />
+        <YAxis
+          tick={{ stroke: '#FFFFFF', strokeWidth: 1 }}
+          stroke="#324B55"
+        />
+        <Tooltip contentStyle={{ backgroundColor: '#27272C' }} />
       </LineChart>
     </div>
   );
