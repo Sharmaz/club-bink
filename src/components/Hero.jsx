@@ -1,14 +1,11 @@
 import { useRef, useState } from 'react';
 import BtcChart from './BtcChart';
 import BinkLogo from '../assets/images/bink_logo.svg';
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
 
 function Hero() {
   const [amount, setAmount] = useState(500);
   const [frecuency, setFrecuency] = useState('Semanal');
   const ref = useRef(null);
-  const entry = useIntersectionObserver(ref, {});
-  const isVisible = !!entry?.isIntersecting;
 
   return (
     <section id="dca" ref={ref} className="text-slate-50 mx-4 mb-10 pt-36 max-w-screen-xl md:mx-auto relative flex">
