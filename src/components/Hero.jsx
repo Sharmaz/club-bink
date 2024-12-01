@@ -1,11 +1,16 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect} from 'react';
 import BtcChart from './BtcChart';
 import BinkLogo from '../assets/images/bink_logo.svg';
+import { handleFrecuencyChange } from '../Controller/HandleFrecuency';
 
 function Hero() {
   const [amount, setAmount] = useState(500);
   const [frecuency, setFrecuency] = useState('Semanal');
   const ref = useRef(null);
+
+  useEffect(() => {
+    handleFrecuencyChange(amount, frecuency);
+  }, [amount, frecuency]);
 
   return (
     <section id="dca" ref={ref} className="text-slate-50 mx-4 mb-10 pt-36 max-w-screen-xl md:mx-auto relative flex">
