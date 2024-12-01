@@ -20,13 +20,13 @@ function filterDataEveryXDays(dataArray, FrequencyEnum) {
           }
           break;
         case "Bisemanal":
-          if (diffDays >= 30) {
+          if (diffDays >= 14) {
             result.push(dataArray[i]);
             lastDate = currentDate;
           }
           break;
         case "Mensual":
-          if (diffDays >= 365) {
+          if (diffDays >= 30) {
             result.push(dataArray[i]);
             lastDate = currentDate;
           }
@@ -47,11 +47,8 @@ export function handleFrecuencyChange(amount, FrequencyEnum) {
     // Filter the data
     const filteredData = filterDataEveryXDays(btcData, FrequencyEnum);
     // convert filteredData int json
-    const filteredDataJson = filteredData.map((d) => ({ date: d.date, price: d.price }));
-
-    // String builder to display the data
-    
-
+    const filteredDataJson = filteredData.map((d) => ({ date: d.date, price: d.price }));    
+    // Save the data in localStorage
     localStorage.setItem('btcData', JSON.stringify(filteredDataJson));
 }
 

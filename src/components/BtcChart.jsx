@@ -15,7 +15,7 @@ function BtcChart() {
       <LineChart
         width={800}
         height={600}
-        data={btcData}
+        data={localStorage.getItem('btcData') ? JSON.parse(localStorage.getItem('btcData')) : btcData}
         margin={{
           top: 5,
           right: 20,
