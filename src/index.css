@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  @apply text-slate-400 scroll-smooth;
+  @apply text-slate-50 scroll-smooth;
   background-color: #001219;
 }
 
@@ -12,6 +12,6 @@ html {
   transition-all ease-in-out delay-100;
 }
 
-.landPage-header {
+.header {
   background-color: #152429;
 }

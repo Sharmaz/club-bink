@@ -10,9 +10,9 @@ function Header() {
   }
 
   return (
-    <header className="fixed w-full top-0 z-20 backdrop-blur landPage-header">
-      <nav className="flex items-center justify-between py-2 px-2 relative max-w-screen-lg">
-        <a href="/me" className="ml-4 md:ml-0">
+    <header className="fixed w-full top-0 z-20 header">
+      <nav className="flex items-center justify-between py-2 px-2 relative w-full">
+        <a href="/me" className="ml-4 md:ml-8">
           <div className="flex items-center">
             <img src={BinkLogo} width={48} height={48} alt="Club Bink Logo" />
           </div>
@@ -30,16 +30,16 @@ function Header() {
           </div>
         </div>
         <ul className="hidden md:flex text-xl">
-          <li className="mx-2">
+          <li className="mx-8">
             <a href="#about" className="hover:drop-shadow-3xl">About</a>
           </li>
-          <li className="mx-2">
+          <li className="mx-8">
             <a href="#experience" className="hover:drop-shadow-3xl">Problems</a>
           </li>
-          <li className="mx-2">
+          <li className="mx-8">
             <a href="#work" className="hover:drop-shadow-3xl">Proposals</a>
           </li>
-          <li className="mx-2">
+          <li className="mx-8">
             <a href="#contact" className="hover:drop-shadow-3xl">Tools</a>
           </li>
         </ul>
