@@ -13,9 +13,9 @@ function Hero() {
   return (
     <section id="dca" ref={ref} className="text-slate-50 mx-4 mb-10 pt-36 max-w-screen-xl md:mx-auto relative flex">
       <div className="text-2xl md:text-4xl mt-12 mx-4">
-        <div className={`absolute top-50 mt-16 left-0 transition-all ease-in-out duration-300 ${isVisible ? 'md:opacity-100 md:translate-x-20' : 'md:opacity-0'}`}>
+        <div className="relative flex items-center justify-center">
           <img
-            className="w-[200px]"
+            className="absolute top-16 w-[200px]"
             src={BinkLogo}
             width={262}
             height={244}
