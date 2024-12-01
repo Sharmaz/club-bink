@@ -1,9 +1,11 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import BtcChart from './BtcChart';
 import BinkLogo from '../assets/images/bink_logo.svg';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 
 function Hero() {
+  const [amount, setAmount] = useState(500);
+  const [frecuency, setFrecuency] = useState('Semanal');
   const ref = useRef(null);
   const entry = useIntersectionObserver(ref, {});
   const isVisible = !!entry?.isIntersecting;
@@ -26,22 +28,53 @@ function Hero() {
           <p className="amount text-lg mt-8">
             Monto a comprar frecuentemente
           </p>
-          <input className="text-slate-800 w-[280px] rounded-md text-xl px-2 mb-2" type="text" name="amount" id="frecuency" value="500" />
+          <input
+            className="text-slate-800 w-[280px] rounded-md text-xl px-2 mb-2"
+            type="text"
+            name="amount"
+            id="frecuency"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+          />
           <div className="text-xl">
             <label htmlFor="weekly">
-              <input className="accent-amber-400" type="radio" name="frecuency" id="weekly" value="Semanal" checked />
+              <input
+                className="accent-amber-400"
+                type="radio"
+                name="frecuency"
+                id="weekly"
+                value="Semanal"
+                checked={frecuency === 'Semanal'}
+                onChange={(e) => setFrecuency(e.target.value)}
+              />
               <span className="ml-2">Semanal</span>
             </label>
           </div>
           <div className="text-xl">
             <label htmlFor="twoweeks">
-              <input className="accent-amber-400" type="radio" name="frecuency" id="twoweeks" value="Bisemanal" />
+              <input
+                className="accent-amber-400"
+                type="radio"
+                name="frecuency"
+                id="twoweeks"
+                value="Bisemanal"
+                checked={frecuency === 'Bisemanal'}
+                onChange={(e) => setFrecuency(e.target.value)}
+              />
               <span className="ml-2">Bisemanal</span>
             </label>
           </div>
           <div className="text-xl">
             <label htmlFor="monthly">
-              <input className="accent-amber-400" type="radio" name="frecuency" id="monthly" value="Mensual" />
+              <input
+                className="accent-amber-400"
+                type="radio"
+                name="frecuency"
+                id="monthly"
+                value="Mensual"
+                checked={frecuency === 'Mensual'}
+                onChange={(e) => setFrecuency(e.target.value)}
+              />
               <span className="ml-2">Mensual</span>
             </label>
           </div>
