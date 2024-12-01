@@ -1,27 +1,23 @@
 import { useRef, useState, useEffect} from 'react';
 import BtcChart from './BtcChart';
 import BinkLogo from '../assets/images/bink_logo.svg';
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import { handleFrecuencyChange } from '../Controller/HandleFrecuency';
-
 
 function Hero() {
   const [amount, setAmount] = useState(500);
   const [frecuency, setFrecuency] = useState('Semanal');
   const ref = useRef(null);
-  const entry = useIntersectionObserver(ref, {});
-  const isVisible = !!entry?.isIntersecting;
 
   useEffect(() => {
     handleFrecuencyChange(amount, frecuency);
   }, [amount, frecuency]);
 
   return (
-    <section ref={ref} className="text-slate-50 mx-4 mb-10 mt-36 max-w-screen-xl md:mx-auto relative flex">
+    <section id="dca" ref={ref} className="text-slate-50 mx-4 mb-10 pt-36 max-w-screen-xl md:mx-auto relative flex">
       <div className="text-2xl md:text-4xl mt-12 mx-4">
-        <div className={`absolute top-50 mt-16 left-0 transition-all ease-in-out duration-300 ${isVisible ? 'md:opacity-100 md:translate-x-20' : 'md:opacity-0'}`}>
+        <div className="relative flex items-center justify-center">
           <img
-            className="w-[200px]"
+            className="absolute top-16 w-[200px]"
             src={BinkLogo}
             width={262}
             height={244}
