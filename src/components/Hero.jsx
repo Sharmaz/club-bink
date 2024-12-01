@@ -11,7 +11,7 @@ function Hero() {
   const isVisible = !!entry?.isIntersecting;
 
   return (
-    <section ref={ref} className="text-slate-50 mx-4 mb-10 mt-36 max-w-screen-xl md:mx-auto relative flex">
+    <section id="dca" ref={ref} className="text-slate-50 mx-4 mb-10 pt-36 max-w-screen-xl md:mx-auto relative flex">
       <div className="text-2xl md:text-4xl mt-12 mx-4">
         <div className={`absolute top-50 mt-16 left-0 transition-all ease-in-out duration-300 ${isVisible ? 'md:opacity-100 md:translate-x-20' : 'md:opacity-0'}`}>
           <img
