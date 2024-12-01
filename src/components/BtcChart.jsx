@@ -27,17 +27,18 @@ function BtcChart() {
         <Line
           type="monotone"
           dataKey="price"
-          stroke="#8884d8"
+          stroke="#FEA419"
           dot={false}
         />
-        <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+        <CartesianGrid stroke="#1D1D23" strokeDasharray="5 5" />
         <XAxis
           dataKey="date"
           angle={-35}
           textAnchor="end"
           height={200}
+          tick={{ stroke: '#F8FDFE', strokeWidth: 0.5 }}
         />
-        <YAxis />
+        <YAxis tick={{ stroke: '#F8FDFE', strokeWidth: 0.5 }} />
         <Tooltip />
       </LineChart>
     </div>
