@@ -1,10 +1,10 @@
 function Footer() {
   return (
-    <div className="py-4 mx-4 max-w-screen-lg md:pl-8 md:mx-auto flex justify-between items-center relative">
-      <div className="bg-gradient-to-tl from-heliotrope via-dark-orchid to-metallic-blue w-full h-0.5 absolute top-0 left-0" />
-      <span className="md:text-xl">
-        2024 Club Bink
-      </span>
+    <div className="py-4 mx-4 w-full flex justify-center items-center text-xl">
+      <div className="flex items-center justify-center">
+        {`${new Date().getFullYear()} Club Bink - Powered by `}
+        <a href="https://hackalajara.xyz/"><img src="https://hackalajara.xyz/hackalajara-logo.png" width={200} alt="Hackalajara 2024" /></a>
+      </div>
     </div>
   );
 }
