@@ -15,3 +15,9 @@ html {
 .header {
   background-color: #152429;
 }
+
+.info-container {
+  background-image: url('./assets/images/bink_background02.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}

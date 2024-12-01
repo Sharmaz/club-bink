@@ -31,16 +31,10 @@ function Header() {
         </div>
         <ul className="hidden md:flex text-xl">
           <li className="mx-8">
-            <a href="#about" className="hover:drop-shadow-3xl">About</a>
+            <a href="#dca" className="hover:drop-shadow-3xl">DCA</a>
           </li>
           <li className="mx-8">
-            <a href="#experience" className="hover:drop-shadow-3xl">Problems</a>
-          </li>
-          <li className="mx-8">
-            <a href="#work" className="hover:drop-shadow-3xl">Proposals</a>
-          </li>
-          <li className="mx-8">
-            <a href="#contact" className="hover:drop-shadow-3xl">Tools</a>
+            <a href="#info" className="hover:drop-shadow-3xl">Info</a>
           </li>
         </ul>
         <div className="purple-gradient w-full h-0.5 absolute bottom-0 left-0" />
@@ -48,16 +42,10 @@ function Header() {
         <nav className={`absolute w-full h-screen bg-background top-16 transition-opacity ease-in duration-300 ${!show ? 'opacity-0 translate-y-full ' : 'opacity-100 translate-y-0'}`}>
           <ul className="flex flex-col text-2xl ml-4">
             <li className="my-8">
-              <a href="#about" onClick={showMenu}>About</a>
+              <a href="#dca" onClick={showMenu}>DCA</a>
             </li>
             <li className="my-8">
-              <a href="#experience" onClick={showMenu}>Problems</a>
-            </li>
-            <li className="my-8">
-              <a href="#work" onClick={showMenu}>Proposals</a>
-            </li>
-            <li className="my-8">
-              <a href="#contact" onClick={showMenu}>Tools</a>
+              <a href="#info" onClick={showMenu}>Info</a>
             </li>
           </ul>
         </nav>
